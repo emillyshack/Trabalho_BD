@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Criando o degradê de aquamarine */
+    background: linear-gradient(to bottom, aquamarine, lightblue);
+    height: 100vh;
+}
+
+div#form_fundo {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#cem {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nome{
+    padding: 4px;
+    border-radius: 5px;
+}
+#senha{
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-left: 4px;
+    border-radius: 5px;
+}
+#btn_login{
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btn_login:hover{
+   background-color: rgb(0, 0, 0);
+   border: rgb(0, 0, 0);
+   color: aliceblue;
+   
+}
+    </style>
+</head>
+
+<body>
+    <div id="cem">
+        <div id="form_fundo">
+            <h1>LOGIN</h1>
+            <br>
+            <div id="form_frente">
+                <form action="/login" id="login" method="post">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required placeholder="Digite seu nome"> 
+                    <br>
+                    <br>
+                    <label for="senha" id="senha"><strong>Senha</strong></label>
+                    <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
+                    <button type="submit" id="btn_login">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>Entrar
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
